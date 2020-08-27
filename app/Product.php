@@ -10,6 +10,28 @@ class Product extends Model
 
     protected $table = 'products';
 
+    /*
+     * image json format:
+     *
+     * "image":{
+     *    "uid": string,
+     *    "link": string,
+     *    "is_default": boolean,
+     *
+     * }
+     */
+
+    /*
+     * category json format:
+     *
+     * category: {
+     *  uid: string
+     *  name: string
+     *  children_of: category|null
+     * }
+     *
+     */
+
     protected $fillable = [
         "image",
         "ref",
