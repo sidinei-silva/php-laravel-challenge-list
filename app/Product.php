@@ -48,4 +48,9 @@ class Product extends Model
     protected $primaryKey = 'id';
 
     protected $guarded = ['created_at', 'updated_at'];
+
+    protected $casts = [
+        'price_ht' => 'float',
+        'price_ttc' => 'float',
+    ];
 }
