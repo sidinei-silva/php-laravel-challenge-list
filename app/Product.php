@@ -2,6 +2,8 @@
 
 namespace App;
 
+use App\Casts\Json;
+
 use Illuminate\Database\Eloquent\Model;
 
 class Product extends Model
@@ -52,5 +54,8 @@ class Product extends Model
     protected $casts = [
         'price_ht' => 'float',
         'price_ttc' => 'float',
+        'image' => Json::class,
+        'category' => Json::class,
+
     ];
 }
