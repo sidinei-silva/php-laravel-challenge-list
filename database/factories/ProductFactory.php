@@ -34,9 +34,9 @@ $factory->define(Product::class, function (Faker $faker) {
     }
 
     $images = [
-        ["uid" => md5(uniqid("")), "link" => "https://api.adorable.io/avatars/260/$faker->word", "is_default" => true],
-        ["uid" => md5(uniqid("")), "link" => "https://api.adorable.io/avatars/260/$faker->word", "is_default" => false],
-        ["uid" => md5(uniqid("")), "link" => "https://api.adorable.io/avatars/260/$faker->word", "is_default" => false]
+        ["uid" => md5(uniqid("")), "link" => "https://picsum.photos/200", "is_default" => true],
+        ["uid" => md5(uniqid("")), "link" => "https://picsum.photos/200", "is_default" => false],
+        ["uid" => md5(uniqid("")), "link" => "https://picsum.photos/200", "is_default" => false]
     ];
 
 
