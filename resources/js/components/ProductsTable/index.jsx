@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import ReactDOM from 'react-dom';
 import MUIDataTable from "mui-datatables";
 import axios from "axios";
@@ -9,8 +9,6 @@ import FiberManualRecordIcon from '@material-ui/icons/FiberManualRecord';
 import MoreVertIcon from '@material-ui/icons/MoreVert';
 import { green, red } from '@material-ui/core/colors';
 import CustomSearchRender from './CustomSearchRender';
-
-
 
 import {
     createMuiTheme,
@@ -103,6 +101,10 @@ function Index() {
         setPageIndex(0);
         getProducts({ search: termSearch });
     }
+
+    useEffect(() => {
+        getProducts({ page: pageIndex + 1, rows: rowsPerPage });
+    }, [products]);
 
     const options = {
         serverSide: true,
