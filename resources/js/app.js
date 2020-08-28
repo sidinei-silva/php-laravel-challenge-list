@@ -14,3 +14,4 @@ require('./bootstrap');
 
 require('./components/Example');
 require('./components/ProductsTable/index.jsx');
+require('./components/ProductDetails/index.jsx');
